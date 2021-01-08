@@ -6,3 +6,10 @@ spring:
           github:
             clientId: ${KEEP_NOTES_GITHUB_CLIENT_ID}
             clientSecret: ${KEEP_NOTES_GITHUB_SECRET}
+
+  jpa:
+    datasource:
+      url: jdbc:h2:mem
+      username: sa
+    hibernate:
+      ddl_auto: create-drop
