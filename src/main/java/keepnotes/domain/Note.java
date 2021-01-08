@@ -35,6 +35,9 @@ public class Note {
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "note", orphanRemoval = true)
     private List<Attachment> attachments;
 
+    @OneToMany(cascade = CascadeType.ALL)
+    private List<Note> subNotes;
+
     private LocalDateTime remindAt;
 
     @Embedded
@@ -51,6 +54,10 @@ public class Note {
     public void addAttachment(Attachment attachment) {
         attachment.setNote(this);
         attachments.add(attachment);
+    }
+
+    public void addSubNote(Note note) {
+        this.subNotes.add(note);
     }
 
     public void setRemindAt(LocalDateTime remindAt) {
