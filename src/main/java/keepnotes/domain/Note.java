@@ -7,6 +7,7 @@ import org.hibernate.annotations.UpdateTimestamp;
 import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Table(name = "notes")
@@ -27,6 +28,9 @@ public class Note {
 
     @ManyToOne(optional = false)
     private Member author;
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "note", orphanRemoval = true)
+    private List<Attachment> attachments;
 
     @CreationTimestamp
     private LocalDateTime createdAt;
