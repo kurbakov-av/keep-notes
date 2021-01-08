@@ -45,6 +45,9 @@ public class Note {
 
     private boolean archived;
 
+    @ManyToOne
+    private Comment comment;
+
     @CreationTimestamp
     private LocalDateTime createdAt;
 
