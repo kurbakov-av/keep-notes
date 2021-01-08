@@ -32,9 +32,28 @@ public class Note {
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "note", orphanRemoval = true)
     private List<Attachment> attachments;
 
+    private LocalDateTime remindAt;
+
+    @Embedded
+    private String hexColor;
+
+    private boolean archived;
+
     @CreationTimestamp
     private LocalDateTime createdAt;
 
     @UpdateTimestamp
     private LocalDateTime updatedAt;
+
+    public void setColor(int red, int green, int blue) {
+        hexColor = String.format("#%02X%02X%02X", red, green, blue);
+    }
+
+    public void setColor(String hexColor) {
+        if (!hexColor.startsWith("#")) {
+            hexColor = "#".concat(hexColor);
+        }
+
+        this.hexColor = hexColor;
+    }
 }
