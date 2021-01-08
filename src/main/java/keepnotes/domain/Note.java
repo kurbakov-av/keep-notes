@@ -48,6 +48,11 @@ public class Note {
     @UpdateTimestamp
     private LocalDateTime updatedAt;
 
+    public void addAttachment(Attachment attachment) {
+        attachment.setNote(this);
+        attachments.add(attachment);
+    }
+
     public void setColor(int red, int green, int blue) {
         hexColor = String.format("#%02X%02X%02X", red, green, blue);
     }
