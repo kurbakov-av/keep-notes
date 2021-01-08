@@ -53,6 +53,15 @@ public class Note {
         attachments.add(attachment);
     }
 
+    public void setRemindAt(LocalDateTime remindAt) {
+        LocalDateTime timeNow = LocalDateTime.now();
+        if (timeNow.isAfter(remindAt)) {
+            remindAt = timeNow;
+        }
+
+        this.remindAt = remindAt;
+    }
+
     public void setColor(int red, int green, int blue) {
         hexColor = String.format("#%02X%02X%02X", red, green, blue);
     }
