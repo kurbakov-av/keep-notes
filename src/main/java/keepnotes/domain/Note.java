@@ -29,6 +29,9 @@ public class Note {
     @ManyToOne(optional = false)
     private Member author;
 
+    @ManyToOne(optional = false)
+    private Project project;
+
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "note", orphanRemoval = true)
     private List<Attachment> attachments;
 
