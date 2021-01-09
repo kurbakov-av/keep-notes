@@ -18,4 +18,7 @@ public class Profile {
 
     @OneToMany(cascade = CascadeType.REMOVE)
     private List<Note> trashNotes;
+
+    @ManyToOne
+    private User owner;
 }
