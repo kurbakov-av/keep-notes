@@ -24,6 +24,9 @@ public class Priority implements Comparable<Priority> {
     @PositiveOrZero
     private Integer value;
 
+    @Embedded
+    private Color color;
+
     @Override
     public int compareTo(Priority o) {
         return Integer.compare(value, o.value);
