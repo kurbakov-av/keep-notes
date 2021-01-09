@@ -45,6 +45,7 @@ public class Note {
 
     private boolean archived;
 
+    @OrderBy("createdAt DESC")
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "note", orphanRemoval = true)
     private List<Comment> comment;
 
