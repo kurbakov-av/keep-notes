@@ -6,15 +6,15 @@ import javax.persistence.*;
 import java.util.List;
 
 @Entity
-@Table(name = "members")
+@Table(name = "profiles")
 @Data
-public class Member {
+public class Profile {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String fullName;
+    private String title;
 
     @OneToMany(cascade = CascadeType.REMOVE)
     private List<Note> trashNotes;

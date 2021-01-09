@@ -21,7 +21,7 @@ public class Comment implements Comparable<Comment> {
     private String text;
 
     @ManyToOne(optional = false)
-    private Member author;
+    private Profile author;
 
     @OneToMany(cascade = CascadeType.ALL)
     private List<Attachment> attachments;

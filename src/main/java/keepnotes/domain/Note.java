@@ -27,7 +27,7 @@ public class Note {
     private boolean complete;
 
     @ManyToOne(optional = false)
-    private Member author;
+    private Profile author;
 
     @ManyToOne(optional = false)
     private Project project;
