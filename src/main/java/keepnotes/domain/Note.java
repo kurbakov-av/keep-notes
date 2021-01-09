@@ -52,6 +52,9 @@ public class Note {
     @ManyToOne(optional = false)
     private Priority priority;
 
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Tag> tags;
+
     @CreationTimestamp
     private LocalDateTime createdAt;
 
