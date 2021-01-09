@@ -48,6 +48,9 @@ public class Note {
     @ManyToOne
     private Comment comment;
 
+    @ManyToOne(optional = false)
+    private Priority priority;
+
     @CreationTimestamp
     private LocalDateTime createdAt;
 
