@@ -11,7 +11,7 @@ import java.util.List;
 @Entity
 @Table(name = "comments")
 @Data
-public class Comment {
+public class Comment implements Comparable<Comment> {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -31,4 +31,9 @@ public class Comment {
 
     @CreationTimestamp
     private LocalDateTime createdAt;
+
+    @Override
+    public int compareTo(Comment o) {
+        return this.createdAt.compareTo(o.createdAt);
+    }
 }
