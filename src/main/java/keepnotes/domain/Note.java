@@ -45,8 +45,8 @@ public class Note {
 
     private boolean archived;
 
-    @ManyToOne
-    private Comment comment;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "note", orphanRemoval = true)
+    private List<Comment> comment;
 
     @ManyToOne(optional = false)
     private Priority priority;
