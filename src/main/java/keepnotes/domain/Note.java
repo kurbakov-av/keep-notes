@@ -44,7 +44,7 @@ public class Note {
     private LocalDateTime remindAt;
 
     @Embedded
-    private String hexColor;
+    private Color color;
 
     private boolean archived;
 
@@ -80,17 +80,5 @@ public class Note {
         }
 
         this.remindAt = remindAt;
-    }
-
-    public void setColor(int red, int green, int blue) {
-        hexColor = String.format("#%02X%02X%02X", red, green, blue);
-    }
-
-    public void setColor(String hexColor) {
-        if (!hexColor.startsWith("#")) {
-            hexColor = "#".concat(hexColor);
-        }
-
-        this.hexColor = hexColor;
     }
 }
