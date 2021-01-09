@@ -32,6 +32,9 @@ public class Note {
     @ManyToOne(optional = false)
     private Project project;
 
+    @Embedded
+    private Location location;
+
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "note", orphanRemoval = true)
     private List<Attachment> attachments;
 
