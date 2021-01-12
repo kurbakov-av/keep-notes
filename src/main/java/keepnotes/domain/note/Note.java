@@ -37,6 +37,9 @@ public class Note {
     @ManyToOne(optional = false)
     private Project project;
 
+    @ManyToOne
+    private Image image;
+
     @Embedded
     private Location location;
 
