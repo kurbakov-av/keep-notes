@@ -1,4 +1,4 @@
-package keepnotes.domain;
+package keepnotes.domain.note;
 
 import lombok.Data;
 import org.hibernate.annotations.CreationTimestamp;

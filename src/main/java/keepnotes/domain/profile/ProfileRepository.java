@@ -1,4 +1,4 @@
-package keepnotes.domain;
+package keepnotes.domain.profile;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.rest.core.annotation.RestResource;

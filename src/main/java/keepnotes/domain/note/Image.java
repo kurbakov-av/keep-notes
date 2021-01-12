@@ -1,5 +1,6 @@
-package keepnotes.domain;
+package keepnotes.domain.note;
 
+import keepnotes.domain.attachment.Attachment;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 

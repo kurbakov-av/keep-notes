@@ -1,4 +1,4 @@
-package keepnotes.domain;
+package keepnotes.domain.user;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

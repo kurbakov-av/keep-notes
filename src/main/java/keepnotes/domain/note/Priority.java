@@ -1,5 +1,6 @@
-package keepnotes.domain;
+package keepnotes.domain.note;
 
+import keepnotes.domain.Color;
 import lombok.Data;
 
 import javax.persistence.*;

@@ -1,5 +1,10 @@
-package keepnotes.domain;
+package keepnotes.domain.note;
 
+import keepnotes.domain.Color;
+import keepnotes.domain.Location;
+import keepnotes.domain.attachment.Attachment;
+import keepnotes.domain.profile.Profile;
+import keepnotes.domain.project.Project;
 import lombok.Data;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;

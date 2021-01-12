@@ -1,5 +1,6 @@
-package keepnotes.domain;
+package keepnotes.domain.attachment;
 
+import keepnotes.domain.note.Note;
 import lombok.Data;
 
 import javax.persistence.*;

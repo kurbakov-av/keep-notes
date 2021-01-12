@@ -1,5 +1,7 @@
-package keepnotes.domain;
+package keepnotes.domain.note;
 
+import keepnotes.domain.attachment.Attachment;
+import keepnotes.domain.profile.Profile;
 import lombok.Data;
 import org.hibernate.annotations.CreationTimestamp;
 
